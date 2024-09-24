@@ -65,6 +65,7 @@ export EMAIL_TRANSPORT_DEFAULT_USERNAME=""
 export EMAIL_TRANSPORT_DEFAULT_PASSWORD=""
 export EMAIL_TRANSPORT_DEFAULT_TLS=""
 
+docker compose -f docker-compose-ce.yaml up -d
 
 docker compose -f docker-compose-ce.yaml exec passbolt su -m -c "/usr/share/php/passbolt/bin/cake \
 passbolt register_user \
