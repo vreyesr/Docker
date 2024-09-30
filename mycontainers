@@ -2,3 +2,4 @@ podman images
 podman tag ubuntu-pass:2.0 ghcr.io/vreyesr/ubuntu-pass:latest
 echo $TOKEN | podman login ghcr.io -u vreyesr --password-stdin
 podman pull ghcr.io/vreyesr/ubuntu-pass:latest
+# podman push ghri.io/vreyesr/stock.latest --tls-verify=false
