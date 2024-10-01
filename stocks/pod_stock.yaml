@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python-stocks
+spec:
+  containers:
+  - name: python-stocks
+    image: ghcr.io/vreyesr/stocks:latest
+  imagePullSecrets:
+  - name: github-registry
