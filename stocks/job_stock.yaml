@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: python-stock
+spec:
+  schedule: "*/1 * * * *"  # Every minute
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: python-stock
+            image: ghcr.io/vreyesr/stocks:latest  # Replace with your Docker image
+            command: ["python", "/stocks.py"]
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: github-registry
